@@ -125,7 +125,7 @@ class SDBLLexerTest extends AbstractLexerTest<SDBLLexer> {
     assertMatch("ТОГДА", "THEN", SDBLLexer.THEN);
     assertMatch("ТОЛЬКО", "ONLY", SDBLLexer.ONLY);
     assertMatch("УБЫВ", "DESC", SDBLLexer.DESC);
-    assertMatch("УПОРЯДОЧИТЬ ПО", "ORDER ПО", SDBLLexer.ORDER, SDBLLexer.PO_RU);
+    assertMatch("УПОРЯДОЧИТЬ ПО", "ORDER BY", SDBLLexer.ORDER_BY);
     assertMatch("ЧАС", "HOUR", SDBLLexer.HOUR);
     assertMatch("ЧИСЛО", "NUMBER", SDBLLexer.NUMBER);
     assertMatch("УНИЧТОЖИТЬ", "DROP", SDBLLexer.DROP);
