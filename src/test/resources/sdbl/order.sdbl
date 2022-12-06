@@ -1,0 +1,7 @@
+SELECT
+	Versions.VersionName
+
+	FROM
+		InformationRegister.AccountsReceivablePaymentTermsVersions.SliceLast(&Date, Order = &Ref) AS Versions
+	ORDER BY
+		Versions.VersionName

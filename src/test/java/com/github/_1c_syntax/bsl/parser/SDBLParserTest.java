@@ -300,6 +300,15 @@ class SDBLParserTest extends AbstractParserTest<SDBLParser, SDBLLexer> {
     );
   }
 
+  @Test
+  void testOrder() {
+    checkSource("src/test/resources/sdbl/order.sdbl",
+            pair(SDBLParser.RULE_queries, 1),
+            pair(SDBLParser.RULE_selectedField, 1),
+            pair(SDBLParser.RULE_builtInFunctions, 0)
+    );
+  }
+
   private void checkSource(String filePath, Pair... rules) {
     var exampleString = TestUtils.getSourceFromFile(filePath);
     setInput(exampleString);

@@ -81,7 +81,7 @@ class SDBLLexerTest extends AbstractLexerTest<SDBLLexer> {
     assertMatch("ИЛИ", "Or", SDBLLexer.OR);
     assertMatch("ИМЕЮЩИЕ", "HAVING", SDBLLexer.HAVING);
     assertMatch("ИНАЧЕ", "ELSE", SDBLLexer.ELSE);
-    assertMatch("ИНДЕКСИРОВАТЬ BY", "INDEX BY", SDBLLexer.INDEX, SDBLLexer.BY_EN);
+    assertMatch("ИНДЕКСИРОВАТЬ BY", "INDEX BY", SDBLLexer.INDEX_BY);
     assertMatch("ИТОГИ", "TOTALS", SDBLLexer.TOTALS);
     assertMatch("КАК", "AS", SDBLLexer.AS);
     assertMatch("КВАРТАЛ", "QUARTER", SDBLLexer.QUARTER);
@@ -109,8 +109,8 @@ class SDBLLexerTest extends AbstractLexerTest<SDBLLexer> {
     assertMatch("ПУСТАЯТАБЛИЦА", "EMPTYTABLE", SDBLLexer.EMPTYTABLE);
     assertMatch("РАЗЛИЧНЫЕ", "DISTINCT", SDBLLexer.DISTINCT);
     assertMatch("РАЗРЕШЕННЫЕ", "ALLOWED", SDBLLexer.ALLOWED);
-    assertMatch("Сгруппировать По", SDBLLexer.GROUP, SDBLLexer.PO_RU);
-    assertMatch("GROUP BY", SDBLLexer.GROUP, SDBLLexer.BY_EN);
+    assertMatch("Сгруппировать По", SDBLLexer.GROUP_BY);
+    assertMatch("GROUP BY", SDBLLexer.GROUP_BY);
     assertMatch("СЕКУНДА", "SECOND", SDBLLexer.SECOND);
     assertMatch("СОЕДИНЕНИЕ ПО", SDBLLexer.JOIN, SDBLLexer.PO_RU);
     assertMatch("JOIN ON", SDBLLexer.JOIN, SDBLLexer.ON_EN);
@@ -125,7 +125,7 @@ class SDBLLexerTest extends AbstractLexerTest<SDBLLexer> {
     assertMatch("ТОГДА", "THEN", SDBLLexer.THEN);
     assertMatch("ТОЛЬКО", "ONLY", SDBLLexer.ONLY);
     assertMatch("УБЫВ", "DESC", SDBLLexer.DESC);
-    assertMatch("УПОРЯДОЧИТЬ ПО", "ORDER BY", SDBLLexer.ORDER_BY);
+    assertMatch("УПОРЯДОЧИТЬ BY", "УПОРЯДОЧИТЬ BY", SDBLLexer.ORDER_BY);
     assertMatch("ЧАС", "HOUR", SDBLLexer.HOUR);
     assertMatch("ЧИСЛО", "NUMBER", SDBLLexer.NUMBER);
     assertMatch("УНИЧТОЖИТЬ", "DROP", SDBLLexer.DROP);

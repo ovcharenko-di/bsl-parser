@@ -74,10 +74,10 @@ query:
     (INTO temporaryTableName=identifier)?
     (FROM from=dataSources)?
     (WHERE where=logicalExpression)?
-    (GROUP (BY_EN | PO_RU) groupBy=groupByItem)?
+    (GROUP_BY groupBy=groupByItem)?
     (HAVING having=logicalExpression)?
     (FOR UPDATE forUpdate=mdo?)?
-    (INDEX (BY_EN | PO_RU) indexes+=indexingItem (COMMA indexes+=indexingItem)*)?
+    (INDEX_BY indexes+=indexingItem (COMMA indexes+=indexingItem)*)?
     ;
 
 // различные ограничения выборки, для ускорения анализа развернуты все варианты
